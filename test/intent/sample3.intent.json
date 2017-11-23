@@ -1,7 +1,7 @@
 {
   "utterance": "tell me the news",
-  "intent_type": "CBCNewsIntent",
+  "intent_type": "BBCNewsIntent",
   "intent": {
-    "CBCNewsKeyword": "tell me the cbc news"
+    "BBCNewsKeyword": "tell me the bbc news"
   }
 }

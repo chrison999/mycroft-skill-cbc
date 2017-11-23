@@ -1,7 +1,7 @@
 {
-  "utterance": "what's the cbc news",
-  "intent_type": "CBCNewsIntent",
+  "utterance": "what's the bbc news",
+  "intent_type": "BBCNewsIntent",
   "intent": {
-    "CBCNewsKeyword": "cbc news"
+    "BBCNewsKeyword": "bbc news"
   }
 }

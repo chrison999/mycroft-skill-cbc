@@ -1,7 +1,7 @@
 {
   "utterance": "is there any news",
-  "intent_type": "CBCNewsIntent",
+  "intent_type": "BBCNewsIntent",
   "intent": {
-    "CBCNewsKeyword": "cbc news"
+    "BBCNewsKeyword": "bbc news"
   }
 }

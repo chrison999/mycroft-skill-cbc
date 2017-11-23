@@ -1,10 +1,10 @@
-# mycroft-skill-cbc-news
+# mycroft-skill-bbc-news
 #
-# A Mycroft skill to play the latest cbc news
+# A Mycroft skill to play the latest bbc news
 #
-# Based on the daily_meditation skill by kfezer
+# Based on the mycroft-skill-cbc-news skill by chrison999
 #
-# Modified by chrison999
+# Modified by jubbathejack
 #
 # This skill is licensed under the GNU General Public License v3.
 # You should have received a copy of the GNU General Public License
@@ -21,26 +21,26 @@ from mycroft.skills.core import MycroftSkill
 from mycroft.util import play_mp3
 from mycroft.util.log import getLogger
 
-__author__ = 'chrison999'
+__author__ = 'jubbathejack'
 
 LOGGER = getLogger(__name__)
 
 
-class CBCNewsSkill(MycroftSkill):
+class BBCNewsSkill(MycroftSkill):
     def __init__(self):
-        super(CBCNewsSkill, self).__init__(name="CBCNewsSkill")
+        super(BBCNewsSkill, self).__init__(name="BBCNewsSkill")
         self.process = None
 
     def initialize(self):
-        intent = IntentBuilder("CBCNewsIntent").require(
-            "CBCNewsKeyword").build()
+        intent = IntentBuilder("BBCNewsIntent").require(
+            "BBCNewsKeyword").build()
         self.register_intent(intent, self.handle_intent)
 
     def handle_intent(self, message):
         try:
 
-            data = feedparser.parse("http://www.cbc.ca/podcasting/includes/hourlynews.xml")
-            self.speak_dialog('cbc.news')
+            data = feedparser.parse("http://podcasts.files.bbci.co.uk/p02nq0gn.rss")
+            self.speak_dialog('bbc.news')
             time.sleep(5)
 
             self.process = play_mp3(
@@ -52,10 +52,10 @@ class CBCNewsSkill(MycroftSkill):
 
     def stop(self):
         if self.process and self.process.poll() is None:
-            self.speak_dialog('cbc.news.stop')
+            self.speak_dialog('bbc.news.stop')
             self.process.terminate()
             self.process.wait()
 
 
 def create_skill():
-    return CBCNewsSkill()
+    return BBCNewsSkill()

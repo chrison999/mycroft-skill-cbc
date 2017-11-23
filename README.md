@@ -1,29 +1,21 @@
-# mycroft-skill-cbc-news
-A skill my MycroftAI that plays the latest cbc (Canadian Broadcasting
+# mycroft-skill-bbc-news
+A skill my MycroftAI that plays the latest global bbc (British Broadcasting
 Corporation) news
 
 ## DESCRIPTION:
 
-This Mycroft skill is a modification of the npr-skill by jdorleans.
-Basically, all I have done is changed the URL from the latest NPR
-news feed to CBC Radio's latest news feed.
+This Mycroft skill is a modification of the mycroft-skill-cbc-news by chrison999.
+Basically, all I have done is changed the URL from the latest CBC
+news feed to BBC World Service's latest global news feed.
 
 ## CURRENT STATE:
 
-Works great!
+In testing.
 
 ## USAGE:
 
 Say any of the following:
 
-  * cbc news
-  * tell me cbc news
-  * listen to cbc news
-
-##### NOTE:
-
-Apparently CBC News Radio pulls the last "latest news" URL at the top of
-the hour and then there is a few minutes delay before the new URL
-appears.  This means that if you use this skill at the top of the hour
-it may fail if the new URL isn't available.  This is *not* a bug with
-this skill...  it's just the way Fox News Radio does things.
+  * bbc news
+  * tell me bbc news
+  * listen to bbc news
